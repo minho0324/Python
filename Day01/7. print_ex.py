@@ -31,7 +31,7 @@ print(dog, cat, '좋아요~', sep='♥')
 print함수를 쓸 때마다 자동으로 줄 개행이 되는 것처럼 보입니다.
 '''
 
-# print(dog, cat, '좋아요~', end='\n') -> 기본값
+print(dog, cat, '좋아요~', end='\n', sep='!!') 
 print(dog, cat, '좋아요~', end=' ')
 print('이 문장은 줄 개행이 됐을까요?')
 
