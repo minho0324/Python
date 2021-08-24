@@ -65,7 +65,7 @@ print('-' * 40)
 print('15 + 8 = ???')
 
 while True:
-    answer = (input('> ')
+    answer = input('> ')
     if answer.isdecimal():
         answer= int(answer)
     else:
