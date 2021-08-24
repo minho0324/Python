@@ -12,7 +12,7 @@ elif에 종속된 코드를 실행합니다.
 갯수에 제한은 없습니다.
 '''
 
-age = int(input('나이 : '))
+age = int(input('나이를 입력하세요: '))
 
 if age >= 20:
     print('성인입니다.')
@@ -23,7 +23,7 @@ elif age >= 14:
 elif age >= 8:
     print('초등학생입니다.')
 else:
-    print('미취학 아동입니다.')
+    print('미취학아동입니다.')
 
 
 '''

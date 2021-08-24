@@ -11,7 +11,7 @@
 
 
 apple = 3
-print('사과가', apple, '개 있습니다.')
+print('사과가',apple,'개 있습니다.')
 print('사과가 %d개 있습니다.' %apple)
 
 
