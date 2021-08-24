@@ -59,4 +59,18 @@ while True:
 print('프로그램 정상 종료.')
 
 
+'''
+* continue
+
+- break가 반복문을 강제로 종료시켰다면, continue는 이번 반복 1회차만 건너뛰고, 다음 반복부터는 정상적으로
+계속 실행하게 하는 탈출문입니다.
+'''
+
+for n in range(1,21):
+    if n % 3 == 0:
+        continue
+    print(n,end=' ')
+print('\n반복문을 종료합니다.')
+
+
 
