@@ -18,7 +18,7 @@ print(type(x))
 for c in x:
     print(c)
 
-
+print('리스트의 길이' , len(c))
 
 
 
