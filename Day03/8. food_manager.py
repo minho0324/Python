@@ -95,6 +95,13 @@ while True:
         만약 y 이외의 값이 들어온다면 종료 의지가 없다고 판단하고
         종료를 취소하도록 하겠습니다.
         '''
+        print('# 프로그램을 종료하시겠습니까? [Y / N]')
+        quit = input('=> ').lower()
+        if quit == 'y':
+            print('프로그램을 종료합니다.')
+            break
+        else:
+            print('종료를 취소합니다.')
       
     else:
         print("메뉴를 잘못 입력하셨습니다.")
