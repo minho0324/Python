@@ -1,11 +1,13 @@
 
 
+
 '''
 * 사전 내부 데이터 관리
 
 - 사전은 변경 가능한 자료형이어서 실행 중에 데이터의 
 추가, 삭제, 수정 등의 편집을 자유롭게 진행할 수 있다.
 '''
+
 
 # 데이터 추가하기 (append처럼 동작)
 # 사전 내부에 존재하지 않는 키(key)를 사용하여 데이터를 대입하면
@@ -20,18 +22,26 @@ eng_kor['banana'] = '바나나' #없는 key를 이용한 대입
 
 print(eng_kor)
 
+
+
+
 '''
 * 사전에 데이터를 수정하기
 - 사전 내부에 이미 존재하는 key를 사용하여 새로운데이터를
 대입하면 해당 key값에 맵핑되어있는 value가 수정됩니다.
 '''
+
 eng_kor['book'] = '서적'
 print(eng_kor)
+
+
+
 
 '''
 - 사전의 key목록과 value목록을 따로따로 추출하고 싶다면
  사전의 메서드 keys(), values()를 사용합니다.
 '''
+
 print('-' * 40)
 print(eng_kor.keys())
 print(eng_kor.values())
@@ -41,6 +51,8 @@ print(eng_kor.values())
 # for ~ in 뒤에 사전 데이터를 적으면 key만 반복순회합니다.
 for k in eng_kor:
     print(k, ':', eng_kor[k])
+
+
 
 
 '''

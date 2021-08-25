@@ -21,14 +21,13 @@ while True:
         key:value 쌍으로 맵핑하여 사전에 저장하세요.
         '''
 
-        
-        menu_foods = input('메뉴 이름을 입력하세요: ')
-        price = int(input('가격을 입력하세요: '))
-        if menu_foods in foods:
-           print('이미 있는 메뉴예요. 다른이름으로 등록하세요.')
+        name = input('메뉴명: ')
+        if name not in foods:
+            price = input('가격: ')
+            foods[name] = price
+            print(f'신규메뉴{name}이 등록되었습니다.')
         else:
-            print('등록 되었습니다.')
-            foods[f'{menu_foods}'] = f'{price}'
+            print(f'{name}은 이미 등록된 메뉴입니다.')
 
        
 
@@ -53,19 +52,41 @@ while True:
          이름이 없으면 없다고 출력.
         # 나가기 -> 메인메뉴로 나가시면 됩니다.
         '''
-        if len(foods) == 0:
-            print('메뉴등록을 먼저 진행하세여!')
-        else:
-            for menu_foods in foods:
-                print(menu_foods, ':', foods[menu_foods])
 
-        choose = str(input('1. 수정 | 2. 삭제 | 3. 나가기'))
-        if choose == 1:
+        if len(foods) != 0:
+            print('\n========== 메뉴판 ==========')
+            for m in foods:
+                print(f'{m} : {foods[m]}원')
+            print('=============================')
+            print('1. 수정 | 2. 삭제 | 3. 나가기')
+            select = input('> ')
+            if select == '1':
+                print('가격을 변경할 메뉴를 먼저 입력해 주세요.')
+                name = input('=> ')
+                if name in foods:
+                    new_price = input('변경할 가격: ')
+                    foods[name] = new_price
+                    print(f'{name}의 가격이 {new_price}원으로 변경되었습니다.')
+                else:
+                    print(f'{name}은 등록된 음식이 아닙니다.')
+
+            elif select == '2':
+                print('삭제할 음식명을 입력하세요.')
+                name = input('=> ')
+
+                if name in foods:
+                    del(foods[name])
+                    print(f'{name}이(가) 삭제되었습니다.')
+                else:
+                    print(f'{name}은(는) 등록된 음식이 아닙니다.')
             
-            modify_price = str(input('수정할 가격: '))
-            foods[f'{menu_foods}'] = f'{modify_price}'
+            elif select == '3':
+                continue # 3번은 아예 작성하지 않아도 어차피 처음으로 돌아갑니다.
 
-      
+                    
+        else:
+            print('등록된 메뉴가 없습니다. 메뉴부터 등록해주세요.')
+
 
     elif menu == 3:
         '''
@@ -79,5 +100,5 @@ while True:
         print("메뉴를 잘못 입력하셨습니다.")
 
     
-print("\n메뉴를 보시려면 Enter키를 입력하세요...")
-input()
+    print("\n메뉴를 보시려면 Enter키를 입력하세요...")
+    input()
