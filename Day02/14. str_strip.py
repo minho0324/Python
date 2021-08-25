@@ -7,8 +7,7 @@
 
 user_id = input('아이디: ')
 print(user_id + '님 안녕하세요~')
-'''
+
 print(user_id.lstrip() + '님 안녕하세요~')
 print(user_id.rstrip() + '님 안녕하세요~')
 print(user_id.strip() + '님 안녕하세요~')
-'''
