@@ -14,11 +14,12 @@
 sale_rate = 0.2 # 전역변수
 
 def calc_price(price):
-    print(f'오늘의 할인율: {sale_rate*100}%')
+    print(f'오늘의 할인율: {sale_rate * 100}%')
 
     today_price = price-(price*sale_rate)  # 지역변수
     print(f'오늘의 가격: {today_price:0.0f}원')
     print('-' * 40)
+    return today_price
 
 t_price = calc_price(2000)
 print(sale_rate)

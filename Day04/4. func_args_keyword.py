@@ -30,7 +30,7 @@ print(calc_stepsum(step=1,begin=3,end=7))
 print(calc_stepsum(3,step=1,end=7))
 # print(calc_stepsum(end=7,3,1)) (x)
 # print(calc_stepsum(3,1,end=7)) (x)
-# print(calc_stepsum(3,,end=7,1)) (x)
+# print(calc_stepsum(3,end=7,1)) (x)
 
 print(3,6,9,sep='->',end='!')
 #print(sep='->',end='!',3,6,9) (x)

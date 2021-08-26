@@ -9,18 +9,19 @@ for ~ else문을 통해 확인하는것이 가능합니다. (flag)
 
 n1,n2 = map(int, input('정수 2개를 입력하세요: ').split())
 
-if n1 > n2:
+if n1 > n2: # n1이 클 경우, 숫자를 바꿔치기한다.
     n1,n2 = n2,n1
 
 cnt = 0 # 소수의 개수를 저장할 변수.
 
-for i in range(n1,n2+1):
-    for j in range(2, i):
+for i in range(n1,n2+1):  
+    for j in range(2, i): 
         if i % j == 0:
             break
-    else: # for문에서 break가 한번도 동작하지 않으면 else문이 발동하다.
+    else: # for문에서 break가 한번도 동작하지 않으면 else문이 발동한다.
         print(i, end=' ')
         cnt += 1
+
 
 print('\n소수의 개수: ',cnt,'개')
 

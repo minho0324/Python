@@ -18,11 +18,10 @@ def calc_total(*nums):
         sum += n
     return sum
 
-print(calc_total(5,7,9,11,100,200,354,44,25,11,67))
+# print(calc_total(5,7,9,11,100,200,354,44,25,11,67))
 
 def calc_points(*points, name):
     print(f'{name}학생의 성적 계산...')
-
     total = 0
     for p in points:
         total += p
@@ -41,6 +40,7 @@ print(f'평균: {result}점')
 사용자에게 map()를 사용해서 여러개의 값을 하나의 input()으로 입력 받은 후 
 get_max()에게 전달해서 가장 큰 값을 리턴받으세요.
 '''
+print('-' * 40)
 
 def get_max(*nums):
     max = nums[0]
