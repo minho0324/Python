@@ -11,10 +11,19 @@ li = [1,2,3,4,5,6,7]
 li2 = [1,3,8,4,5,7,101]
 li3 = []
 
-x = set(li)
-y = set(li2)
-print(x)
-print(y)
+result = set(li) ^ set(li2)
+print(list(result))
+result.sort()
+print(result)
+
+''''
+for n in li:
+    if n not in li2:
+        li3.append(n)
+'''
+
+
+
 
 sum = (set(li) | set(li2)) - (set(li) & set(li2))
 print('sum', sum)

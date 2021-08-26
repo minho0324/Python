@@ -43,15 +43,15 @@ for p in pokemon:
         idx += 1
 '''
 
-'''
-- 2
+
+
 for idx in range(5):
     if name == pokemon[idx]:
         del(pokemon[idx])
         break
 
 print('삭제 후 정보: ', pokemon)
-'''
+
 
 
 
