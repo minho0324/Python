@@ -34,14 +34,15 @@ time.sleep(1)
 for num in range(1,4):
     politics = driver.find_element_by_xpath(f'//*[@id="main_content"]/div/div[2]/div[1]/div[{num}]/div[1]/ul/li[1]/div[2]/a')
     politics_id = f'//*[@id="main_content"]/div/div[2]/div[1]/div[{num}]/div[1]/ul/li[1]/div[2]/a'
-    if politics_id.find('[2]', )
+    if politics_id.find('[2]',75,77) == '':
+        politics_id.add('[2]',75,77)
     politics.click()
     time.sleep(1)
     driver.back()
     time.sleep(1)
 
 driver.back()
-
+time.sleep(1)
 
 # 경제 
 economy_btn = driver.find_element_by_xpath('//*[@id="lnb"]/ul/li[4]/a/span').click()
@@ -57,7 +58,29 @@ for num in range(1,4):
     time.sleep(1)
 
 driver.back()
+time.sleep(1)
+
+# 사회
 '''
+
+# 헤드 버튼 id값들 목록
+politics_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[3]/a/span')
+economy_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[4]/a/span')
+social_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[5]/a/span')
+liv_cul_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[6]/a/span')
+world_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[7]/a/span')
+it_sci_btn = driver.find_element_by_xpath('//*[@id="lnb"]/ul/li[8]/a/span')
+
+# head_btn = f'//*[@id="lnb"]/ul/li[{num}]/a/span'
+
+
+
+for num in range(3,9): # 헤드버튼 반복문
+    head_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[{num}]/a/span').click()
+    for x in range(46,49):
+      politics_btn = driver.find_element_by_xpath(f'//*[@id="main_content"]/div/div[2]/div[1]/div[{x}]/div[1]/ul/li[1]/div[2]/a').click()
+
+
 
 
     

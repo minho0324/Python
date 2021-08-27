@@ -7,11 +7,11 @@
 적당한 메서드를 선택해서 사용합니다.
 
 1. read() : 파일 전체를 통째로 읽어서 리턴
-2. readline(): 파일데이터를 한 줄씩 읽어서 리턴
+2. readline(): 파일 데이터를 한 줄씩 읽어서 리턴
 3. readlines(): 파일 전체를 읽어서 한 줄씩 분리한 후에 리스트에 담아 리턴
 '''
 
-file_path = r'C:\Users\minho\Desktop\test\test.txt'
+file_path = r'C:\Users\minho\Desktop\test\test2.txt'
 
 '''
 
@@ -40,15 +40,15 @@ except:
     print('파일 로드 실패!')
 finally:
     f.close()
+    
 
 
-# readlines() 는 파일 데이터를 한 줄씪 읽어서
+# readlines() 는 파일 데이터를 한 줄씩 읽어서
 # 리스트에 담아서 리턴하기 때문에 읽은 데이터를
 # 리스트 문법을 사용해서 처리할 수 있습니다.
 
 try:
     f = open(file_path, 'r')
-
     text = f.readlines()
     print(text)
 except:

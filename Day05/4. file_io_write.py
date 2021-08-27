@@ -30,9 +30,10 @@ ex) open('파일경로', 모드)
 
 try:
     # 파일 저장 기능 (write, upload)
-    file_path = r'C:\Users\minho\Desktop\test\test.txt' # 앞에 r을 붙이면 로우 데이터로 인식 혹은 \\t로 백슬래쉬 하나 추가하기 혹은 백슬래쉬자리에 모두 /(정슬래시) 넣기
-    # C:\Users\minho\Desktop\\test 혹은 C:/Users/minho/Desktop/test
-
+    file_path = r'C:\Users\minho\Desktop\test\test.txt' 
+    # 앞에 r을 붙이면 로우 데이터로 인식 혹은 \\t로 백슬래쉬 하나 추가하기 혹은 백슬래쉬자리에 모두 /(정슬래시) 넣기
+    # C:\\Users\\minho\\Desktop\\test 혹은 C:/Users/minho/Desktop/test
+    
     # 파일 입출력을 실행하는 내장 함수 open()
     # 반환값으로 파일 입출력을 담당하는 객체를 리턴합니다.
     # 첫번째 인수로 파일 경로를, 두번쨰 인수로 모드를 설정

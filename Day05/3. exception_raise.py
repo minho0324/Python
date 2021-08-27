@@ -14,6 +14,7 @@ def calc_sum(end):
     if end <= 0:
         raise ValueError
 
+
     total = 0
     for n in range(1, end+1):
         total += n
