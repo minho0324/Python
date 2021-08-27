@@ -24,9 +24,11 @@ for n in li:
 
 
 
-
+'''
+내가한거
 sum = (set(li) | set(li2)) - (set(li) & set(li2))
 print('sum', sum)
+'''
 
 '''
 common = set(li) & set(li2)

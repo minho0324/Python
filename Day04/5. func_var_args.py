@@ -60,4 +60,3 @@ print('최대값: ',get_max(n1,n2,n3,n4,n5))
 
 
 
-
