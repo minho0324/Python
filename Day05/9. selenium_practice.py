@@ -22,63 +22,52 @@ driver.get('https://www.naver.com')
 time.sleep(1)
 
 # 네이버 뉴스 진입
-naver_news_btn = driver.find_element_by_xpath('//*[@id="NM_NEWSSTAND_HEADER"]/div[2]/a[1]').click()
+driver.find_element_by_xpath('//*[@id="NM_NEWSSTAND_HEADER"]/div[2]/a[1]').click()
 time.sleep(1)
 
 
 '''
-# 정치
-politics_btn = driver.find_element_by_xpath('//*[@id="lnb"]/ul/li[3]/a/span').click()
-time.sleep(1)
-
-for num in range(1,4):
-    politics = driver.find_element_by_xpath(f'//*[@id="main_content"]/div/div[2]/div[1]/div[{num}]/div[1]/ul/li[1]/div[2]/a')
-    politics_id = f'//*[@id="main_content"]/div/div[2]/div[1]/div[{num}]/div[1]/ul/li[1]/div[2]/a'
-    if politics_id.find('[2]',75,77) == '':
-        politics_id.add('[2]',75,77)
-    politics.click()
-    time.sleep(1)
-    driver.back()
-    time.sleep(1)
-
-driver.back()
-time.sleep(1)
-
-# 경제 
-economy_btn = driver.find_element_by_xpath('//*[@id="lnb"]/ul/li[4]/a/span').click()
-time.sleep(1)
-
-for num in range(1,4):
-    economy = driver.find_element_by_xpath(f'//*[@id="main_content"]/div/div[2]/div[1]/div[{num}]/div[1]/ul/li[1]/div[2]/a')
-    economy_id = f'//*[@id="main_content"]/div/div[2]/div[1]/div[{num}]/div[1]/ul/li[1]/div[2]/a'
-
-    economy.click()
-    time.sleep(1)
-    driver.back()
-    time.sleep(1)
-
-driver.back()
-time.sleep(1)
-
-# 사회
-'''
-
-# 헤드 버튼 id값들 목록
-politics_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[3]/a/span')
-economy_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[4]/a/span')
-social_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[5]/a/span')
-liv_cul_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[6]/a/span')
-world_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[7]/a/span')
-it_sci_btn = driver.find_element_by_xpath('//*[@id="lnb"]/ul/li[8]/a/span')
 
 # head_btn = f'//*[@id="lnb"]/ul/li[{num}]/a/span'
-
-
 
 for num in range(3,9): # 헤드버튼 반복문
     head_btn = driver.find_element_by_xpath(f'//*[@id="lnb"]/ul/li[{num}]/a/span').click()
     for x in range(46,49):
       politics_btn = driver.find_element_by_xpath(f'//*[@id="main_content"]/div/div[2]/div[1]/div[{x}]/div[1]/ul/li[1]/div[2]/a').click()
+'''
+
+
+
+for x in range(3, 9):
+    news_tab = f'//*[@id="lnb"]/ul/li[{x}]/a'
+    driver.find_element_by_xpath(news_tab).click()
+    time.sleep(0.5)
+
+    for n in range(1, 5):
+        if x > 3:
+            i = 2
+        else:
+            i = 1
+        
+        try:
+            news_head = f'//*[@id="main_content"]/div/div[2]/div[1]/div[{n}]/div[{i}]/ul/li[1]/div[2]/a'
+            driver.find_element_by_xpath(news_head).click()
+        except:
+            news_head = f'//*[@id="main_content"]/div/div[2]/div[1]/div[{n}]/div[{i}]/ul/li[1]/div/a'
+            driver.find_element_by_xpath(news_head).click()
+
+        time.sleep(0.7)
+        driver.back()
+        time.sleep(0.5)
+
+
+
+
+
+
+
+
+
 
 
 
